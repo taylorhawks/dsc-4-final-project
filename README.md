@@ -28,13 +28,14 @@ Let's get started by examining the dataset requirements for this project.
 
 ## The Dataset
 
-For this module's project, the dataset will be heavily tied to the problem you are trying to solve. We recommend that you base your project around one of the three following subdomains in Deep Learning which you now have experience with:
+For this module's project, the dataset will be heavily tied to the problem you are trying to solve. We recommend that you base your project around one of the following subdomains:
 
 * Traditional  analytics (classification or clustering)
-* Computer Vision
+* Computer Vision (SEE WARNING)
 * Text Classification/NLP
+* Implicit or explicit ratings of items between users (For Rec. Engine)
 
-### Picking a Reasonable Problem - Especially for DeepLearning
+### Picking a Reasonable Problem - Especially for Deep Learning
 
 Note that in respect to this project, all datasets and problems are not created equal--while you could likely build a working model for just about any dataset you find in theory, in practice, you'll find that many datasets have dimensionality issues that make them intractable for training without spending hundreds or even thousands of dollars training your model on a professional server cluster filled with high-end GPUs.
 
