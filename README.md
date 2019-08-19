@@ -1,31 +1,28 @@
 
-# Module 4 Final Project
+# Module 6 Final Project
 
 
-## Introduction
-
-In this lesson, we'll review all of the guidelines and specifications for the final project for Module 4. 
-
-## Objectives
-You will be able to:
-* Describe all required aspects of the final project for Module 4
+* Describe all required aspects of the final project for Module 6
 * Describe all required deliverables
 * Describe what constitutes a successful project
 * Describe what the experience of the project review should be like
 
 ## Final Project Summary
 
-You've made it all the way through one of the toughest modules of this course, and demonstrated a solid understanding of the principles of Deep Learning. You must have an amazing brain in your head!
 
-<img src='https://raw.githubusercontent.com/learn-co-curriculum/dsc-4-final-project/master/brain.gif' height=40% width=40%>
+For this module's final project, you'll choose one of the following:
+- Recommendation System
+- Natural Language Processing
+- Deep Neural Network
+- Clustering
 
-For this module's final project, you'll put everything you've learned together to build a Deep Neural Network that trains on a large dataset for classification on a non-trivial task! This project will include:
+Put everything you've learned together to build a model that trains on a large dataset for classification on a non-trivial task! This project will include:
 
-* Selecting a problem 
-* Sourcing an appropriate dataset
-* Setting up your project (directory structure, etc)
-* Building, training, tuning, and evaluating a Deep Neural Network
-* Explaining your methodology and findings in a clear, concise manner
+1. Selecting a problem 
+2. Sourcing an appropriate dataset
+3. Setting up your project (directory structure, etc)
+4. Building, training, tuning, and evaluating a model
+5. Explaining your methodology and findings in a clear, concise manner
 
 Let's get started by examining the dataset requirements for this project.
 
@@ -33,11 +30,11 @@ Let's get started by examining the dataset requirements for this project.
 
 For this module's project, the dataset will be heavily tied to the problem you are trying to solve. We recommend that you base your project around one of the three following subdomains in Deep Learning which you now have experience with:
 
-* Traditional  analytics (classification or regression tasks)
+* Traditional  analytics (classification or clustering)
 * Computer Vision
 * Text Classification/NLP
 
-### Picking a Reasonable Problem
+### Picking a Reasonable Problem - Especially for DeepLearning
 
 Note that in respect to this project, all datasets and problems are not created equal--while you could likely build a working model for just about any dataset you find in theory, in practice, you'll find that many datasets have dimensionality issues that make them intractable for training without spending hundreds or even thousands of dollars training your model on a professional server cluster filled with high-end GPUs.
 
@@ -45,7 +42,7 @@ A good litmus test for checking a project's feasibility is to head over to Kaggl
 
 Here are some caveats you should consider when selecting your dataset:
 
-#### A Note on Computer Vision Datasets
+#### Warning: Computer Vision Datasets
 
 **Try to stay away from color images, or images that are larger than 40x40 pixels**. Convolutional Layers are very expensive, and most models can still make successful classifications on grainy, black-and-white images just fine. Pictures that are too large add a bunch of needless dimensionality to the model--remember, every single pixel in the model is a dimension! Similarly, since color images are Rank-3 Tensors (3-dimensional arrays contain Red, Green, and Blue values for each pixel), they also needlessly triple dimensionality without adding important information to your model in most cases.
 
@@ -65,7 +62,7 @@ As you start exploring datasets that are appropriate for Deep Learning, you'll p
 If you so choose, you are also welcome to source your own dataset for this project, although we strongly advise you to think carefully about whether this is worth the time before attempting this! You'll likely need thousands of examples, and scraping google images or other websites can sometimes be more trouble than it's worth. If you feel up to the task, then you are more than welcome to source your own dataset through scraping. However, we strongly encourage you to search the web for preexisting datasets that would work for your chosen task before attempting to source your own, as they likely already exist, and will save you a ton of time debugging your scraping code or getting an API to work.  **If you plan on sourcing your own dataset for this project, please clear this with your instuctor first!**
  
  
- #### Avoid Generative Models
+ #### No Generative Models
  
 After the end of the Deep Learning module, you may be tempted to try building a Generative Model such as a Generative Adversarial Network, Variation Autoencoder, or Sequence Generation model. Although you theoretically know enough to attempt such problems, in practice, these models are much too computationally intensive for you to see any meaningful results on a local machine in the time allotted. For reference, most GANs for image generation need to train for a minimum of 3 days straight on a server cluster with 64 high-end GPUs before showing any meaningful results! The other issue with generative models is that they are unsupervised, so it is impossible to generate any sort of accuracy or performance metrics. **For this reason, you must stick to supervised learning and only build discriminative models for this project. No generative models will be approved.**
 
@@ -76,7 +73,6 @@ There will be four deliverables for this project:
 1. A well documented **Jupyter Notebook** containing any code you've written for this project and comments explaining it. This work will need to be pushed to your GitHub repository in order to submit your project.
 2. A short **Keynote/PowerPoint/Google Slide presentation** (delivered as a PDF export) giving a high-level overview of your methodology and recommendations for non-technical stakeholders. Make sure to also add and commit this pdf of your non-technical presentation to your repository with a file name of presentation.pdf. 
 3. A **blog post** (800-1500 words) about one element of the project - it could be the EDA, the feature selection, the choice of visualizations or anything else technical relating to the project. It should be targeted at your peers - aspiring data scientists.
-4. A **Video Walkthrough** of your non-technical presentation. Some common video recording tools used are Zoom, Quicktime, and Nimbus. After you record your presentation, publish it on a service like YouTube or Google Drive, you will need a link to the video to submit your project.
 
 ## The Process
 
@@ -102,7 +98,6 @@ In the first half of the presentation (2-3 mins), you should summarize your meth
 #### 2. Go through the Jupyter Notebook, answering questions about how you made certain decisions. Be ready to explain things like:
     * "how did you pick the question(s) that you did?"
     * "why are these questions important from a business perspective?"
-    * "how did you decide on the data cleaning options you performed?"
     * "why did you choose a given method or library?"
     * "why did you select those visualizations and what did you learn from each of them?"
     * "why did you pick those features as predictors?"
@@ -139,6 +134,8 @@ Just as with the other projects, you should also complete a 5-10 slide PowerPoin
 
 **_HINT_**: Keras provides [excellent documentation](https://keras.io/visualization/) on how to create a visualization of your neural network's architecture!
 
+Also try these out: http://alexlenail.me/NN-SVG/LeNet.html
+
 ### 3. Blog Post
 
 Please also write a blog post about your experience working on this project. This blog post should provide insight into the problem you are trying to solve and your dataset, any preprocessing steps required, and your approach to building and iteratively tuning your model. It should also contain an explanation of any problems, obstacles, or surprises you encountered during this project. The blog post should be between 800-1500 words and should be targeted at your peers - aspiring data scientists.
@@ -150,9 +147,7 @@ You’re almost done! In order to submit your project for review, include the fo
 1. **GitHub Repo:** Now that you’ve completed your project in Jupyter Notebooks, push your work to GitHub and paste that link to the right. (If you need help doing so, review the resources [here](https://docs.google.com/spreadsheets/d/1CNGDhjcQZDRx2sWByd2v-mgUOjy13Cd_hQYVXPuzEDE/edit#gid=0).)
 _Reminder: Make sure to also add and commit a pdf of your non-technical presentation to the repository with a file name of presentation.pdf._
 2. **Blog Post:** Include a link to your blog post.
-3. **Record Walkthrough:** Include a link to your video walkthrough.
 
-Hit "I'm done" to wrap it up. You will receive an email in order to schedule your review with your instructor.
 
 ## Summary
 
